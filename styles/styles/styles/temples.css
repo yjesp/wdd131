@@ -1,0 +1,18 @@
+#menu.open {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  #hamburger {
+      display: block;
+  }
+
+  #menu {
+      display: none;
+      flex-direction: column;
+  }
+
+  #menu.open {
+      display: flex;
+  }
+}
