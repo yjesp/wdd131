@@ -1,15 +1,8 @@
-#hamburger {
-  display: none;
-}
-
+/* Large screen styles */
 #menu {
   flex-direction: row;
 }
 
 #menu li {
   margin: 0 1em;
-}
-
-.gallery {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
