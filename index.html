@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Your Name</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Your Full Name. Keyword summary of page content">
-    <meta name="author" content="Your Full Name">
-    <link rel="stylesheet" href="base.css">
-    <script src="getdates.js" defer></script>
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/temples.js"></script>
 </head>
 <body>
     <header>
-        <h1>Page Heading</h1>
+        <h1>Temple Album</h1>
         <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/">LinkedIn Profile</a></li>
-                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scriptures</a></li>
-                <li><a href="#">Final Project</a></li>
+            <button id="hamburger">&#9776;</button>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="card">
-            <h2>Section 1</h2>
-            <p> specializing in legal advice and litigation. 
-               As a male attorney, I provide comprehensive legal services to my 
-               clients, ensuring their rights are protected and their legal issues 
-               are effectively resolved. With extensive experience in various 
-               legal fields, I am dedicated to delivering the best possible outcomes.</p>
-            <img src="images/Example_Image.jpg" alt="Example_Image">
-            <ul>
-                <li><a href="#">Resource 1</a></li>
-                <li><a href="#">Resource 2</a></li>
-                <li><a href="#">Resource 3</a></li>
-            </ul>
-        </section>
-        <section class="card">
-            <h2>Section 2</h2>
-            <p>Korea is a vibrant country located in East Asia, 
-                known for its rich cultural heritage, technological advancements, 
-                and dynamic economy. It boasts stunning landscapes, from bustling 
-                cities like Seoul to serene countryside. Renowned for K-pop, 
-                delicious cuisine, and historical sites, Korea seamlessly blends 
-                tradition and modernity, making it a captivating destination for 
-                travelers and a leader in innovation.</p>
-            <img src="images/Flag.png" alt="Flag">
-            <ul>
-                <li><a href="#">Resource 1</a></li>
-                <li><a href="#">Resource 2</a></li>
-                <li><a href="#">Resource 3</a></li>
-            </ul>
-        </section>
+        <h2>Home</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/temple1.jpg" alt="Temple 1">
+                <figcaption>Temple 1</figcaption>
+            </figure>
+            <!-- Add 8 more figure elements with temple images and captions here -->
+            <figure>
+                <img src="images/temple2.jpg" alt="Temple 2">
+                <figcaption>Temple 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple3.jpg" alt="Temple 3">
+                <figcaption>Temple 3</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple4.jpg" alt="Temple 4">
+                <figcaption>Temple 4</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple5.jpg" alt="Temple 5">
+                <figcaption>Temple 5</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple6.jpg" alt="Temple 6">
+                <figcaption>Temple 6</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple7.jpg" alt="Temple 7">
+                <figcaption>Temple 7</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple8.jpg" alt="Temple 8">
+                <figcaption>Temple 8</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple9.jpg" alt="Temple 9">
+                <figcaption>Temple 9</figcaption>
+            </figure>
+        </div>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Park Young Jae, Korea</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="year"></span> Temple Album. All rights reserved.</p>
+        <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
+
