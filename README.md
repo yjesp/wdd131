@@ -3,51 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Place</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Beautiful Place</h1>
-        <nav>
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#weather">Weather</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-            </ul>
-        </nav>
+        <h1>Product Review Form</h1>
     </header>
+
     <main>
-        <section id="hero">
-            <picture>
-                <source srcset="images/hero-large.webp" media="(min-width: 800px)">
-                <source srcset="images/hero-medium.webp" media="(min-width: 400px)">
-                <img src="images/hero-small.webp" alt="Beautiful Place">
-            </picture>
-            <div id="hero-text">
-                <h2>Current Weather</h2>
-                <p>Temperature: <span id="temperature">10°C</span></p>
-                <p>Wind speed: <span id="wind-speed">5 km/h</span></p>
-                <p>Windchill: <span id="windchill">N/A</span></p>
+        <form action="review.html" method="get" id="reviewForm">
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
             </div>
-        </section>
-        <section id="overview">
-            <h2>Overview</h2>
-            <p>This is an overview of the beautiful place...</p>
-        </section>
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="gallery-images">
-                <img src="images/gallery1.jpg" alt="Gallery Image 1">
-                <img src="images/gallery2.jpg" alt="Gallery Image 2">
-                <img src="images/gallery3.jpg" alt="Gallery Image 3">
+
+            <div class="form-group">
+                <label>Overall Rating:</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4" required><label for="star4" title="4 stars">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3" required><label for="star3" title="3 stars">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2" required><label for="star2" title="2 stars">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1" required><label for="star1" title="1 star">&#9733;</label>
+                </div>
             </div>
-        </section>
+
+            <div class="form-group">
+                <label for="installationDate">Date of Installation:</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Useful Features:</label>
+                <div>
+                    <input type="checkbox" id="feature1" name="usefulFeatures" value="Feature 1">
+                    <label for="feature1">Feature 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature2" name="usefulFeatures" value="Feature 2">
+                    <label for="feature2">Feature 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature3" name="usefulFeatures" value="Feature 3">
+                    <label for="feature3">Feature 3</label>
+                </div>
+                <!-- Add more features as needed -->
+            </div>
+
+            <div class="form-group">
+                <label for="writtenReview">Written Review:</label>
+                <textarea id="writtenReview" name="writtenReview"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="userName">User Name:</label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
     </main>
+
     <footer>
-        <p>&copy; <span id="current-year"></span></p>
-        <p>Last modified: <span id="last-modified"></span></p>
+        <p>&copy; 2024 Product Reviews</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
